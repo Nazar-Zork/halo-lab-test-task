@@ -1,0 +1,72 @@
+@import "../../styles/vars.scss";
+
+.header{
+    max-width: 1280px;
+    box-sizing: content-box;
+    padding: 0 18px;
+    margin: 0 auto;
+    z-index: 20;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 0;
+        border-bottom: 4px solid $headerBorderbg;
+        position: relative;
+    }
+    &__logo{
+        z-index: 20;
+    }
+    &__menu{
+        display: flex;
+    }
+    &__menuItem{
+        margin-left: 102px;
+        transition: 0.2s all;
+        &:first-child{
+            margin: 0;
+        }
+    }
+    &__ApplyBtn{
+        width: 145px;
+    }
+    &__mobileMenuButton{
+        display: none;
+    }
+}
+@media(max-width: 1200px){
+    .header{
+        &__menuItem{
+            margin-left: 80px;
+        }
+    }
+}
+
+@media(max-width: 992px){
+    .header{
+        &__menuItem{
+            margin-left: 35px;
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .header{
+        &__menu{
+            display: none;
+        }
+        &__ApplyBtn{
+            display: none;
+        }
+        &__mobileMenuButton{
+            display: block;
+        }
+        &__wrapper{
+            padding: 43px 0 27px;
+            border-width: 3px;
+        }
+        &__menuItem{
+            margin-left: 0px;
+        }
+    }
+}

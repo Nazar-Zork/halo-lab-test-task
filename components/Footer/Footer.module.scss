@@ -1,0 +1,116 @@
+@import "../../styles/vars.scss";
+
+.footer{
+    background-color: $footerBg;
+    padding: 96px 0 88px;
+    color: $footerColor;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__column{
+        margin-top: 11px;
+        &:first-child{
+            margin: 0;
+        }
+        &:last-child{
+            margin-right: 23px;
+        }
+    }
+    &__bottomWrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contactHeader{
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 48px;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+    }
+    &__copyright{
+        max-width: 155px;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        opacity: 0.75;
+    }
+    &__columnHeading{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+        margin-bottom: 37px;
+    }
+    &__adressWrapper{
+        letter-spacing: 0.3px;
+        opacity: 0.75;
+    }
+    &__socialList{
+        display: flex;
+    }
+    &__socialItem{
+        margin-right: 16px;
+        &:last-child{
+            margin: 0;
+        }
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+}
+@media(max-width:992px){
+    .footer{
+        padding: 60px 0;
+    }  
+}
+@media(max-width:768px){
+    .footer{
+        padding: 43px 0;
+        &__copyright{
+            max-width: unset;
+            padding-bottom: 33px;
+            font-size: 12px;
+        }
+        &__inner{
+            flex-wrap: wrap;
+            justify-content: unset;
+        }
+        &__copyrightColumn{
+            width: 100%;
+        }
+        &__bottomColumn{
+            width: 50%;
+            box-sizing: border-box;
+        }
+        &__column{
+            margin-top: 0;
+            &:last-child{
+                margin-right: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+        &__contactHeader{
+            font-size: 28px;
+            margin-bottom: 0;
+        }
+        &__columnHeading{
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+    }
+}
+@media(max-width:576px){
+    .footer{
+        &__column{
+            &:last-child{
+                padding-left: 20px;
+                align-items: flex-start;
+            }
+        }
+    }
+}

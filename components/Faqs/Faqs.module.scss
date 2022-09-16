@@ -1,0 +1,65 @@
+.Faqs{
+    padding: 96px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__textWrapper{
+        margin-right: 50px;
+    }
+    &__heading{
+        margin-bottom: 40px;
+    }
+    &__text{
+        max-width: 423px;
+        text-align: left;
+        margin-bottom: 56px;
+    }
+    &__btn{
+        width: 166px;
+    }
+    &__accordionWrapper{
+        max-width: 536px;
+        width: 100%;
+    }
+}
+
+@media(max-width:1200px){
+    .Faqs{
+        &__accordionWrapper{
+            max-width: 450px;
+        }
+    }
+}
+
+@media(max-width:992px){
+    .Faqs{
+        padding: 60px 0;
+    }
+}
+
+@media(max-width:768px){
+    .Faqs{
+        padding:50px 0;
+        &__inner{
+            flex-direction: column;
+        }
+        &__textWrapper{
+            margin: 0 0 48px;
+        }
+        &__text{
+            margin-bottom: 32px;
+        }
+        &__accordionWrapper{
+            max-width: unset;
+        }
+    }
+}
+
+@media(max-width:576px){
+    .Faqs{
+        &__heading{
+            margin-bottom: 20px;
+        }
+    }
+}

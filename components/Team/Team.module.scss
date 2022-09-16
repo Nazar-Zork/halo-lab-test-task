@@ -1,0 +1,127 @@
+.team{
+    padding: 96px 0;
+    &__header{
+        max-width: 352px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 13px;
+    }
+    &__heading{
+        margin-bottom: 16px;
+    }
+    &__photos{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        position: relative;
+        z-index: 5;
+    }
+    &__itemCenter{
+        padding-top: 117px;
+
+    }
+    &__leftLine{
+        position: absolute;
+        left: 162px;
+        top: 20px;
+    }
+    &__rightLine{
+        position: absolute;
+        bottom: 57px;
+        right: 103px;
+    }
+}
+
+@media(max-width:1200px){
+    .team{
+        &__itemPic{
+            max-width: 280px;
+        }
+        &__leftLine{
+            left: 130px;
+            top: 31px;
+        }
+        &__rightLine{
+            bottom: 0px;
+            right: 74px;
+        }
+    }
+}
+
+@media(max-width:992px){
+    .team{
+        padding: 60px 0;
+        &__photos{
+            flex-direction: column;
+        }
+        &__itemCenter{
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+        &__itemRight{
+            display: flex;
+            justify-content: flex-end;
+        }
+        &__leftLine{
+            transform: rotate(37deg);
+            left: 87px;
+            top: 87px;
+        }
+        &__rightLine{
+            transform: rotate(45deg);
+            bottom: 248px;
+            right: 82px;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .team{
+        padding:50px 0;
+        &__rightLine{
+            transform: rotate(85deg);
+            right: 74px;
+            bottom: 180px;
+        }
+    }
+}
+
+@media(max-width:576px){
+    .team{
+        &__itemPic{
+            max-width: 200px;
+        }
+        &__itemCenter{
+            justify-content: flex-end;
+        }
+        &__itemRight{
+            justify-content: flex-start;
+        }
+        &__leftLine{
+            max-width: 255px;
+            left: 146px;
+            top: 87px;
+        }
+        &__rightLine{
+            max-width: 257px;
+            transform: rotate(159deg);
+            right: 120px;
+            bottom: 200px;
+        }
+    }
+}
+@media(max-width:425px){
+    .team{
+        &__leftLine{
+            left: 70px;
+            top: 110px;
+        }
+        &__rightLine{
+            right: 60px;
+            bottom: 200px;
+        }
+    }
+}

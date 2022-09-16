@@ -1,0 +1,43 @@
+@import "../../styles/vars.scss";
+
+.mobileMenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    background-color: $mobileMenuBg;
+    transition: 1s;
+    transform: translateY(-100vh);
+    z-index: 20;
+    &__container{
+        height: 100%;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    &__menu_active{
+        transform: translateY(0vh);
+    }
+    &__header{
+        padding: 42px 0 26px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 3px solid $headerBorderbg;
+    }
+    &__navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 56px
+    }
+    &__applyButton{
+        margin: 0 auto 72px;
+        max-width: 337px;
+        width: 100%;
+    }
+}

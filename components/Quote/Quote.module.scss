@@ -1,0 +1,158 @@
+@import "../../styles/vars.scss";
+
+.quote{
+    padding: 96px 0;
+    &__inner{
+        position: relative;
+        min-height: 592px;
+    }
+    &__leftLeafs{
+        position: absolute;
+        left: -80px;
+        top: 23px;
+    }
+    &__elipse{
+        background: linear-gradient(180deg, #F7F3F4 26.49%, rgba(247, 243, 244, 0) 100%);
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        border-radius: 50%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+    &__rightLeafs{
+        position: absolute;
+        right: -100px;
+        top: 15px;
+    }
+    &__heading{
+        padding-top: 208px;
+        margin: 0 auto ;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 64px;
+        color: $quoteHeading;
+        max-width: 928px;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+    }
+    &__separator{
+        height: 4px;
+        max-width: 736px;
+        margin: 62px auto 78px;
+        background: $quoteSeparatorBg;
+        border: none;
+        position: relative;
+        z-index: 5;
+    }
+    &__listItems{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 5;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        max-width: 186px;
+        margin-right: 87px;
+        &:last-child{
+            margin: 0;
+        }
+    }
+    &__itemImg{
+        margin-right: 16px;
+    }
+    &__itemText{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $quoteItemsTextColor;
+    }
+    &__leftSmallLeafs,
+    &__rightSmallLeafs{
+        display: none;
+    }
+}
+
+@media(max-width:992px){
+    .quote{
+        padding: 60px 0;
+        &__heading{
+            font-size: 40px;
+            line-height: 56px;
+            max-width: 680px;
+        }
+        &__item{
+            margin-right: 40px;
+        }
+    }
+}
+@media(max-width:768px){
+    .quote{
+        padding:50px 0;
+        &__item{
+            flex-direction: column;
+            margin-right: 20px;
+        }
+        &__itemImg{
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &__itemText{
+            text-align: center;
+        }
+    }
+}
+@media(max-width:576px){
+    .quote{
+        &__elipse{
+            width: 234px;
+            height: 234px;
+            top: 97px;
+        }
+        &__listItems{
+            flex-wrap: wrap;
+        }
+        &__item{
+            margin-bottom: 30px;
+            margin-right: 0;
+            max-width: 120px;
+            &:first-child{
+                margin-right: 60px;
+            }
+            &:last-child{
+                margin: 0 61px;
+            }
+        }
+        &__heading{
+            font-size: 24px;
+            line-height: 42px;
+            padding-top:166px;
+        }
+        &__separator{
+            margin: 33px auto 60px;
+        }
+        &__leftLeafs,
+        &__rightLeafs{
+            display: none;
+        }
+        &__leftSmallLeafs{
+            display: block;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        &__rightSmallLeafs{
+            display: block;
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+    }
+}

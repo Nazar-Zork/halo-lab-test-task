@@ -1,0 +1,41 @@
+@import "../../styles/vars.scss";
+
+.natureSlider{
+    padding: 125px 0 168px;
+    background: $natureSliderBg;
+    &__pagination{
+        display: none;
+        justify-content: center;
+        padding-top: 36px;
+        align-items: center;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        color: $natureSliderPaginationColor;
+    }
+    &__leftSliderArrow{
+        margin-right: 40px;
+    }
+    &__rightSliderArrow{
+        margin-left: 40px;
+        transform: rotate(180deg)
+    }
+    &__paginationSlidesQuontity{
+        color: $natureSliderPaginationQuontityColor;
+        padding-left: 3px;
+    }
+}
+
+@media(max-width:992px){
+    .natureSlider{
+        padding: 72px 0 110px;
+    }
+}
+@media(max-width:768px){
+    .natureSlider{
+        padding: 72px 0;
+        &__pagination{
+            display: flex;
+        }
+    }
+}
