@@ -53,10 +53,33 @@ a {
 .topSliderSettings .slick-list{
   overflow: unset;
 }
-/* .topSliderSettings .slick-slide{
-  height: 100%!important;
-} */
+.topSliderSettings .slick-dots{
 
+}
+.topSliderSettings .slick-dots li{
+  width: 11px;
+  height: 11px;
+  margin: 0 7px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: relative;
+}
+.topSliderSettings .slick-dots{
+  bottom: -38px!important;
+}
+.topSliderSettings .slick-dots li button{
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    padding: 0;
+    position: absolute;
+}
+.topSliderSettings .slick-dots li button::before{
+  display: none;
+}
+.topSliderSettings .slick-dots .slick-active{
+  background-color: #000;
+}
 @media(max-width: 992px){
   .container{
     padding: 0 30px;

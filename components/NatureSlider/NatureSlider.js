@@ -81,7 +81,7 @@ const NatureSlider = ()=>{
                 <button className={styles.natureSlider__leftSliderArrow} onClick={() => natureSliderComponent.current.slickPrev()}>
                   <img src={paginationSliderArrow.src} />
                 </button>
-                <div className={styles.natureSlider__paginationText}>{activeIndex+1}<span className={styles.natureSlider__paginationSlidesQuontity}>/6</span></div>
+                <div className={styles.natureSlider__paginationText}>{activeIndex + 1}<span className={styles.natureSlider__paginationSlidesQuontity}>/{sliderItemsInfo.length}</span></div>
                 <button  className={styles.natureSlider__rightSliderArrow} onClick={() => natureSliderComponent.current.slickNext()}>
                   <img src={paginationSliderArrow.src} />
                 </button>
