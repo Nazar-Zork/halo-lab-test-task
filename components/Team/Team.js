@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import styles from './Team.module.scss'
 
 import teamPic1 from '../../public/img/team1.png'
@@ -13,20 +15,20 @@ const Team = () =>{
                 <div className={styles.team__inner}>
                     <div className={styles.team__header}>
                         <h2 className={`${styles.team__heading} ${"headerSectionsTemplate__h2"}`}>Our top team</h2>
-                        <p className={`${styles.team__paragraph} ${"headerSectionsTemplate__p"}`}>Learn more about how you can save our planet's nature. </p>
+                        <p className={`${"headerSectionsTemplate__p"}`}>Learn more about how you can save our planet&apos;s nature. </p>
                     </div>
                     <div className={styles.team__photos}>
-                        <div className={`${styles.team__item} ${styles.team__itemLeft}`}>
-                            <img className={styles.team__itemPic} src={teamPic1.src} alt="" />
+                        <div className={`${styles.team__item}`}>
+                            <div className={styles.team__itemPicWrapper}><Image className={styles.team__itemPic} src={teamPic1} alt="man" /></div>
                         </div>
                         <div className={`${styles.team__item} ${styles.team__itemCenter}`}>
-                            <img className={styles.team__itemPic} src={teamPic2.src} alt="" />
+                            <div className={styles.team__itemPicWrapper}><Image className={styles.team__itemPic} src={teamPic2} alt="girl" /></div>
                         </div>
                         <div className={`${styles.team__item} ${styles.team__itemRight}`}>
-                            <img className={styles.team__itemPic} src={teamPic3.src} alt="" />
+                            <div className={styles.team__itemPicWrapper}><Image className={styles.team__itemPic} src={teamPic3} alt="man" /></div>
                         </div>
-                        <img className={styles.team__leftLine} src={teamLine1.src} alt="" />
-                        <img className={styles.team__rightLine} src={teamLine2.src} alt="" />
+                        <div className={styles.team__leftLineWrapper}><Image className={styles.team__leftLine} src={teamLine1} alt="dotted line" /></div>
+                        <div className={styles.team__rightLineWrapper}><Image className={styles.team__rightLine} src={teamLine2} alt="dotted line" /></div>
                     </div>
                 </div>
             </div>

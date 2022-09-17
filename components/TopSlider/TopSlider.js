@@ -1,5 +1,6 @@
 import Slider from "react-slick";
-import { useRef } from "react";
+import { useRef} from "react";
+import Image from "next/image";
 
 import styles from './TopSlider.module.scss'
 
@@ -17,6 +18,7 @@ const TopSlider = () =>{
             id: 1,
             heading: 'Travel In Japan: The True Experience',
             paragraph: 'When pattern is mentioned in interior design, it is easy to asso- ciate it with a geometric patterned wallpaper or colourful prints on interior fabrics.',
+            colorClass: "orangeSlideBg",
             color: {
                 backgroundColor: '#FFBD9E'
             }
@@ -25,7 +27,7 @@ const TopSlider = () =>{
             id: 2,
             heading: 'Helping Wild Turtles To Travel In Japan',
             paragraph: 'The scale of the challenges facing our planet can seem daunting, but we can all do something. Challenges facing our planet can seem daunting, but we can all do something.',
-            color: '#FFADAD',
+            colorClass: "pinkSlideBg",
             color: {
                 backgroundColor: '#FFADAD'
             }
@@ -34,6 +36,7 @@ const TopSlider = () =>{
             id: 3,
             heading: 'Threats of Modern Indusrial World ',
             paragraph: 'The scale of the challenges facing our planet can seem daunting, but we can all do something. Easy to asso- ciate it with a geometric patterned wallpaper.',
+            colorClass: "blueSlideBg",
             color: {
                 backgroundColor: '#CBCBFF'
             }
@@ -66,7 +69,7 @@ const TopSlider = () =>{
             <div className="container">
                 <div className={styles.topSlider__inner}>
                     <button className={styles.topSlider__leftSliderArrow} onClick={() => sliderComponent.current.slickNext()}>
-                        <img src={slideArowLeft.src} alt="" />
+                        <Image src={slideArowLeft} width={24} height={44} layout="fixed" alt="left arrow"/>
                     </button>
                     <Slider {...settings} ref={sliderComponent}>
                         {slideInfo.map((item, id)=>(
@@ -74,7 +77,7 @@ const TopSlider = () =>{
                         ))}
                     </Slider>
                     <button className={styles.topSlider__rightSliderArrow} onClick={() => sliderComponent.current.slickPrev()}>
-                        <img src={slideArowRight.src} alt="" />
+                        <Image src={slideArowRight} width={24} height={44} layout="fixed" alt="right arrow"/>
                     </button>
                 </div>
             </div>

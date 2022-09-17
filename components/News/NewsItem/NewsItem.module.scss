@@ -11,10 +11,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        box-sizing: content-box;
     }
-    &__videoPlayImg{
+    &__videoPlayImgWrapper{
         position: absolute;
+        z-index: 5;
     }
+
     &__textWrapper{
         padding: 8px 8px 8px 0;
         display: flex;
@@ -60,8 +63,21 @@
         &:last-child{
             margin-bottom: 0;
         }
-        &__imgPrevievImg{
+        &__imgWrapper{
             max-width: 112px;
+            height: 112px;
+            width: 100%;
+        }
+    }
+}
+@media(max-width:576px){
+    .newsItem{
+        margin: 0 0 50px;
+        &:first-child{
+            margin-right: 0;
+        }
+        &:last-child{
+            margin: 0;
         }
     }
 }

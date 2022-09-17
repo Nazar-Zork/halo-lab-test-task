@@ -47,11 +47,14 @@
     &__adressWrapper{
         letter-spacing: 0.3px;
         opacity: 0.75;
+        display: flex;
+        flex-direction: column;
     }
     &__socialList{
         display: flex;
     }
     &__socialItem{
+        display: flex;
         margin-right: 16px;
         &:last-child{
             margin: 0;

@@ -1,5 +1,7 @@
 import Slider from "react-slick";
 import { useState, useRef } from "react";
+import Image from "next/image";
+
 import styles from './NatureSlider.module.scss';
 import NatureSlide from "./Slide/NatureSlide";
 
@@ -63,6 +65,7 @@ const NatureSlider = ()=>{
       slidesToScroll: 1,
       centerMode: true,
       variableWidth: true,
+      arrows:false,
       beforeChange:(oldIndex, newIndex) => setImageIndex(newIndex)
     }
 
@@ -79,11 +82,11 @@ const NatureSlider = ()=>{
             </Slider>
             <div className={styles.natureSlider__pagination}>
                 <button className={styles.natureSlider__leftSliderArrow} onClick={() => natureSliderComponent.current.slickPrev()}>
-                  <img src={paginationSliderArrow.src} />
+                  <Image src={paginationSliderArrow} width={8} height={16} layout='fixed' alt="left arrow"/>
                 </button>
                 <div className={styles.natureSlider__paginationText}>{activeIndex + 1}<span className={styles.natureSlider__paginationSlidesQuontity}>/{sliderItemsInfo.length}</span></div>
                 <button  className={styles.natureSlider__rightSliderArrow} onClick={() => natureSliderComponent.current.slickNext()}>
-                  <img src={paginationSliderArrow.src} />
+                  <Image src={paginationSliderArrow} width={8} height={16} layout='fixed' alt="right arrow"/>
                 </button>
             </div>
         </section>

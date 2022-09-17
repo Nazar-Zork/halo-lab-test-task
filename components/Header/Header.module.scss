@@ -16,16 +16,14 @@
     }
     &__logo{
         z-index: 20;
+        display: flex;
     }
     &__menu{
         display: flex;
+        gap:100px
     }
     &__menuItem{
-        margin-left: 102px;
         transition: 0.2s all;
-        &:first-child{
-            margin: 0;
-        }
     }
     &__ApplyBtn{
         width: 145px;
@@ -36,16 +34,16 @@
 }
 @media(max-width: 1200px){
     .header{
-        &__menuItem{
-            margin-left: 80px;
+        &__menu{
+            gap:80px
         }
     }
 }
 
 @media(max-width: 992px){
     .header{
-        &__menuItem{
-            margin-left: 35px;
+        &__menu{
+            gap:35px
         }
     }
 }
@@ -59,14 +57,11 @@
             display: none;
         }
         &__mobileMenuButton{
-            display: block;
+            display: flex;
         }
         &__wrapper{
             padding: 43px 0 27px;
             border-width: 3px;
-        }
-        &__menuItem{
-            margin-left: 0px;
         }
     }
 }

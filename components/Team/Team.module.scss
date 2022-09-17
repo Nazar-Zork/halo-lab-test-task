@@ -9,6 +9,9 @@
     &__heading{
         margin-bottom: 16px;
     }
+    &__itemPicWrapper{
+        display: flex;
+    }
     &__photos{
         position: relative;
         display: flex;
@@ -22,12 +25,12 @@
         padding-top: 117px;
 
     }
-    &__leftLine{
+    &__leftLineWrapper{
         position: absolute;
         left: 162px;
         top: 20px;
     }
-    &__rightLine{
+    &__rightLineWrapper{
         position: absolute;
         bottom: 57px;
         right: 103px;
@@ -36,14 +39,14 @@
 
 @media(max-width:1200px){
     .team{
-        &__itemPic{
+        &__itemPicWrapper{
             max-width: 280px;
         }
-        &__leftLine{
+        &__leftLineWrapper{
             left: 130px;
             top: 31px;
         }
-        &__rightLine{
+        &__rightLineWrapper{
             bottom: 0px;
             right: 74px;
         }
@@ -65,12 +68,12 @@
             display: flex;
             justify-content: flex-end;
         }
-        &__leftLine{
+        &__leftLineWrapper{
             transform: rotate(37deg);
             left: 87px;
             top: 87px;
         }
-        &__rightLine{
+        &__rightLineWrapper{
             transform: rotate(45deg);
             bottom: 248px;
             right: 82px;
@@ -81,7 +84,7 @@
 @media(max-width:768px){
     .team{
         padding:50px 0;
-        &__rightLine{
+        &__rightLineWrapper{
             transform: rotate(85deg);
             right: 74px;
             bottom: 180px;
@@ -91,7 +94,7 @@
 
 @media(max-width:576px){
     .team{
-        &__itemPic{
+        &__itemPicWrapper{
             max-width: 200px;
         }
         &__itemCenter{
@@ -100,12 +103,12 @@
         &__itemRight{
             justify-content: flex-start;
         }
-        &__leftLine{
+        &__leftLineWrapper{
             max-width: 255px;
             left: 146px;
             top: 87px;
         }
-        &__rightLine{
+        &__rightLineWrapper{
             max-width: 257px;
             transform: rotate(159deg);
             right: 120px;
@@ -115,11 +118,11 @@
 }
 @media(max-width:425px){
     .team{
-        &__leftLine{
+        &__leftLineWrapper{
             left: 70px;
             top: 110px;
         }
-        &__rightLine{
+        &__rightLineWrapper{
             right: 60px;
             bottom: 200px;
         }

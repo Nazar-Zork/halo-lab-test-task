@@ -1,22 +1,18 @@
-import styles from './Header.module.scss'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import styles from './Header.module.scss'
 
 import logoSvg from '../../public/img/logo.svg'
 import openMobileMenuIcon from '../../public/img/openMobileMenu.svg'
 
-
-
-
 const Header = ({activeMenu, setActiveMenu}) =>{
-    const menuToggle = () =>{
-        activeMenu ? setActiveMenu(false) : setActiveMenu(true);
-    }
+    const menuToggle = () =>(activeMenu ? setActiveMenu(false) : setActiveMenu(true));
     return(
-        <>
             <header className={styles.header}>
                 <div className={styles.header__wrapper}>
                     <div className={styles.header__logo}>
-                        <img src={logoSvg.src} />
+                        <Image src={logoSvg} alt="logo" width={112} height={39} layout="fixed"/>
                     </div>
                     <nav className={styles.header__menu}>
                         <Link href='#'><a className={`${styles.header__menuItem} ${'menuLink'}`}>Home</a></Link>
@@ -28,12 +24,10 @@ const Header = ({activeMenu, setActiveMenu}) =>{
                         Apply
                     </button>
                     <button className={styles.header__mobileMenuButton} onClick={menuToggle}>
-                        <img src={openMobileMenuIcon.src}/>
+                        <Image src={openMobileMenuIcon} alt="burger menu" width={22} height={17} layout="fixed"/>
                     </button>
                 </div>
             </header>
-        </>
-        
     )
 }
 

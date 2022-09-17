@@ -1,5 +1,7 @@
-import styles from './NewsItem.module.scss'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import styles from './NewsItem.module.scss'
 
 import playSvg from '../../../public/img/play.svg'
 
@@ -9,9 +11,11 @@ const NewsItem = ({info:{img, hashtag, name, link, isVideo}}) =>{
         <div className={styles.newsItem}>
             <div className={styles.newsItem__imgWrapper}>
                 {
-                    isVideo ? <img className={styles.newsItem__videoPlayImg} src={playSvg.src}/> : null
+                    isVideo 
+                    ? <div className={styles.newsItem__videoPlayImgWrapper}><Image className={styles.newsItem__videoPlayImg} src={playSvg} alt="play"/></div> 
+                    : null
                 }
-                <img className={styles.newsItem__imgPrevievImg} src={img}/>
+                <Image className={styles.newsItem__imgPrevievImg} src={img} alt="news photo"/>
             </div>
             <div className={styles.newsItem__textWrapper}>
                 <div className={styles.newsItem__text}>

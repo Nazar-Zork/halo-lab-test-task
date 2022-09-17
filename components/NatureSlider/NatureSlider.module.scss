@@ -15,17 +15,23 @@
     }
     &__leftSliderArrow{
         margin-right: 40px;
+        display: flex;
     }
     &__rightSliderArrow{
         margin-left: 40px;
-        transform: rotate(180deg)
+        transform: rotate(180deg);
+        display: flex;
     }
     &__paginationSlidesQuontity{
         color: $natureSliderPaginationQuontityColor;
         padding-left: 3px;
     }
 }
-
+@media(max-width:1200px){
+    .natureSlider{
+        padding: 100px 0 130px;
+    }
+}
 @media(max-width:992px){
     .natureSlider{
         padding: 72px 0 110px;

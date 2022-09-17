@@ -9,7 +9,7 @@ const News = () =>{
     const itemsState = [
         {
             id: 1,
-            img: news1.src,
+            img: news1,
             hashtag: 'Stories',
             name: 'Travel In Japan: The True Experience',
             link: '#',
@@ -17,7 +17,7 @@ const News = () =>{
         },
         {
             id: 2,
-            img: news2.src,
+            img: news2,
             hashtag: 'VideoTutor',
             name: 'Helping Wild Turtles',
             link: '#',
@@ -25,7 +25,7 @@ const News = () =>{
         },
         {
             id: 3,
-            img: news3.src,
+            img: news3,
             hashtag: 'Photostory',
             name: 'Threats of Indusrial World',
             link: '#',
