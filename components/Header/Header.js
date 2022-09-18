@@ -24,7 +24,7 @@ const Header = ({activeMenu, setActiveMenu}) =>{
                         Apply
                     </button>
                     <button className={styles.header__mobileMenuButton} onClick={menuToggle}>
-                        <Image src={openMobileMenuIcon} alt="burger menu" width={22} height={17} layout="fixed"/>
+                        <Image priority={true} src={openMobileMenuIcon} alt="burger menu" width={22} height={17} layout="fixed"/>
                     </button>
                 </div>
             </header>

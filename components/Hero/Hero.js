@@ -21,13 +21,13 @@ const Hero = ({activeMenu, setActiveMenu}) =>{
             <div className='container'>
                 <div className={styles.hero__inner}>
                     <div className={styles.hero__textWrapper}>
-                        <Image className={styles.hero__natureImg} src={headlineSvg} alt="nature needs you"/>
+                        <Image priority={true} className={styles.hero__natureImg} src={headlineSvg} alt="nature needs you"/>
                         <p className={styles.hero__text}>
                             The scale of the challenges facing our planet can seem daunting, but we can all do something.
                         </p>
                         <div className={styles.hero__searchInputWrapper}>
                             <div className={styles.hero__searchImgWrapper}>
-                                <Image className={styles.hero__searchImg} src={markerSvg} alt="marker" width={14} height={20} layout="fixed"/>
+                                <Image priority={true} className={styles.hero__searchImg} src={markerSvg} alt="marker" width={14} height={20} layout="fixed"/>
                             </div>
                             <input className={styles.hero__searchInput} type="text" placeholder='Find the place to help' value={searchInputText} onChange={searchInputHandler}/>
                             <button className={`${styles.hero__searchBtn} ${'pinkRedButton'}`}>
@@ -41,7 +41,7 @@ const Hero = ({activeMenu, setActiveMenu}) =>{
                         </div>
                         <div className={styles.hero__card}>
                             <div className={styles.hero__cardImgWrapper}>
-                                <Image className={styles.hero__cardImg} src={cardSvg} alt="members card"/>
+                                <Image priority={true} className={styles.hero__cardImg} src={cardSvg} alt="members card"/>
                             </div>
                             <div className={styles.hero__cardText}>
                                 <h4 className={styles.hero__cardHeading}>Members</h4>

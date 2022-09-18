@@ -13,7 +13,7 @@ const NatureSlide = ({name,description,img,active}) =>(
             <Image src={bg} alt="cloud"/>
         </div>
         <div className={active?`${styles.natureSlide__сornerImg} ${styles.natureSlide__сornerImg_active}`:styles.natureSlide__сornerImg}>
-            <Image src={img} alt="nature"/>
+            <Image priority={true} src={img} alt="nature"/>
         </div>
         <div className={
             active?`${styles.natureSlide__textWrapper} ${styles.natureSlide__textWrapper_active}`:styles.natureSlide__textWrapper

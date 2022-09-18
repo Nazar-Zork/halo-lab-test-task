@@ -17,7 +17,7 @@ const MobileMenu = ({activeMenu, setActiveMenu}) =>{
                             <Image src={logoSvg} alt="logo" width={112} height={39} layout='fixed'/>
                         </div>
                         <button className={styles.mobileMenu__mobileMenuButton} onClick={menuToggle}>
-                            <Image src={closeMobileMenuIcon} alt="burger close menu" width={24} height={24} layout='fixed'/>
+                            <Image priority={true} src={closeMobileMenuIcon} alt="burger close menu" width={24} height={24} layout='fixed'/>
                         </button>
                     </div>
                     <div className={styles.mobileMenu__navigation}>

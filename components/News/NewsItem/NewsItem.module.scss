@@ -17,7 +17,10 @@
         position: absolute;
         z-index: 5;
     }
-
+    &__imgPrevievImg{
+        object-fit: cover;
+        object-position:right;
+    }
     &__textWrapper{
         padding: 8px 8px 8px 0;
         display: flex;

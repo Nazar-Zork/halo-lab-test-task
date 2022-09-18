@@ -15,7 +15,7 @@ const NewsItem = ({info:{img, hashtag, name, link, isVideo}}) =>{
                     ? <div className={styles.newsItem__videoPlayImgWrapper}><Image className={styles.newsItem__videoPlayImg} src={playSvg} alt="play"/></div> 
                     : null
                 }
-                <Image className={styles.newsItem__imgPrevievImg} src={img} alt="news photo"/>
+                <Image layout="fixed" className={styles.newsItem__imgPrevievImg} src={img} alt="news photo"/>
             </div>
             <div className={styles.newsItem__textWrapper}>
                 <div className={styles.newsItem__text}>
