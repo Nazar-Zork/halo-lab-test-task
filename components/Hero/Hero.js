@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import Header from '../Header/Header'
@@ -14,6 +14,12 @@ const Hero = ({activeMenu, setActiveMenu}) =>{
 
     const [searchInputText, setSearchInputText] = useState('');
     const searchInputHandler = (event) => setSearchInputText(event.target.value);
+
+    const membersValue = 29128;
+    const [qounterValue, setQounterValue] = useState(28900);
+    useEffect(()=>{
+        qounterValue !== membersValue && setTimeout(setQounterValue, 10, qounterValue + 1)
+    }, [qounterValue]);
 
     return(
         <section className={styles.hero}>
@@ -45,7 +51,7 @@ const Hero = ({activeMenu, setActiveMenu}) =>{
                             </div>
                             <div className={styles.hero__cardText}>
                                 <h4 className={styles.hero__cardHeading}>Members</h4>
-                                <span className={styles.hero__cardQuontity}>29 128</span>
+                                <span className={styles.hero__cardQuontity}>{qounterValue}</span>
                             </div>
                         </div>
                     </div>
