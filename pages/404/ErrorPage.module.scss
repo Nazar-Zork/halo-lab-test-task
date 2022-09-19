@@ -1,0 +1,47 @@
+@import "../../styles/vars.scss";
+
+.errorPage{
+    background-color: #f7f3f4;
+    overflow: hidden;
+    &__inner{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 100vh;
+    }
+    &__text{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 20;
+        text-align: center;
+    }
+    &__link{
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    &__error{
+        font-size: 200px;
+        line-height: 100%;
+        font-weight: 700;
+    }
+    &__parrotWrapper{
+        margin-bottom: -175px;
+    }
+}
+@media(max-width:576px){
+    .errorPage{
+        &__parrotWrapper{
+            margin-right: -150px;
+        }
+        &__text{
+            top: 30%;
+        }
+        &__error{
+            font-size: 140px;
+        }
+    }
+}
